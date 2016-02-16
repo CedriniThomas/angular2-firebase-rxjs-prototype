@@ -58,4 +58,4 @@ public getValue(path: string): Observable<any> {
 The purpose is to forget about the event_type and focus on how I want the data. I think it is more readable to have something like `fb_service.getValue(mypath)` than `fb_service.observe('value', mypath)`
 
 ## Thank
-The original idea comes from gslotis, I take the idea and transpose it to angular2 in typescript : [Quick Firebase / RxJS binding prototype](https://gist.github.com/gsoltis/ee20138502a4764650f2)
+The original idea comes from @gslotis, I take the idea and transpose it to angular2 in typescript : [Quick Firebase / RxJS binding prototype](https://gist.github.com/gsoltis/ee20138502a4764650f2)
