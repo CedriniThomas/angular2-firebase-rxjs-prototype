@@ -1,0 +1,17 @@
+{
+    "name": "angular2-firebase-rxjs",
+    "version": "1.0.0",
+    "description": "Provide a wrapper for firebase request using RxJs",
+    "repository": "https://github.com/CedriniThomas/angular2-firebase-rxjs-prototype",
+    "keywords": [
+        "angular2",
+        "firebase",
+        "rxjs"
+    ],
+    "dependencies": {
+        "rxjs": "5.0.0-beta.0",
+        "firebase": "^2.0.2"
+    },
+    "author": "Thomas Cedrini",
+    "license": "MIT"
+}
