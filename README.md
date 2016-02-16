@@ -46,15 +46,15 @@ That's all !
 Now to use it, you just need to inject this service inside your component (or a service) and call the observe method.
 
 For my convenience I like to set the observe method in private and declare inline function who will perform the observe call for me. For example :
-    ```
-    public getValue(path: string): Observable<any> {
-        return this.observe('value', path);
-    }
+```
+public getValue(path: string): Observable<any> {
+    return this.observe('value', path);
+}
 
-    public getValue(path: string): Observable<any> {
-        return this.observe('child_added', path);
-    }
-    ```
+public getValue(path: string): Observable<any> {
+    return this.observe('child_added', path);
+}
+```
 The purpose is to forget about the event_type and focus on how I want the data. I think it is more readable to have something like `fb_service.getValue(mypath)` than `fb_service.observe('value', mypath)`
 
 ## Thank
