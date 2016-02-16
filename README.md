@@ -1,5 +1,8 @@
 # Use Firebase with Angular2 and RxJs
-This package is made with Typescript.
+
+## Thanks
+The original idea comes from @gslotis, I take the idea and transpose it to angular2 in typescript : [Quick Firebase / RxJS binding prototype](https://gist.github.com/gsoltis/ee20138502a4764650f2)
+
 ## How does it work?
 ![Illustration of the main idea](idea.png)
 The basic idea is really simple, we use the power of RxJs to turn simple data from Firebase into a stream. So all we need to do is to declare a reference on the firebase url and wrap the incoming data inside an Observable.
@@ -56,6 +59,3 @@ public getValue(path: string): Observable<any> {
 }
 ```
 The purpose is to forget about the event_type and focus on how I want the data. I think it is more readable to have something like `fb_service.getValue(mypath)` than `fb_service.observe('value', mypath)`
-
-## Thank
-The original idea comes from @gslotis, I take the idea and transpose it to angular2 in typescript : [Quick Firebase / RxJS binding prototype](https://gist.github.com/gsoltis/ee20138502a4764650f2)
