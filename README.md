@@ -4,12 +4,17 @@ This package is made with Typescript.
 ![Illustration of the main idea](idea.png)
 The basic idea is really simple, we use the power of RxJs to turn simple data from Firebase into a stream. So all we need to do is to declare a reference on the firebase url and wrap the incoming data inside an Observable.
 * Declare a reference
+    ```
     private _ref: Firebase;
+    ```
 
+    ```
     constructor() {
         this._ref = new Firebase('your_firebase_url');
     }
+    ```
 * Wrap the incoming data
+    ```
     // @params eventType -> the name of the event ("value", "child_added", "child_changed", "child_removed", or "child_moved.")
     // @params path -> the node you want to get data if nothing set just take the root.
     public observe(eventType: string, path: string = '/'): Observable<any> {
@@ -34,12 +39,14 @@ The basic idea is really simple, we use the power of RxJs to turn simple data fr
         // Finally give the stream
         return observable;
     }
+    ```
 
 That's all !
 
 Now to use it, you just need to inject this service inside your component (or a service) and call the observe method.
 
 For my convenience I like to set the observe method in private and declare inline function who will perform the observe call for me. For example :
+    ```
     public getValue(path: string): Observable<any> {
         return this.observe('value', path);
     }
@@ -47,6 +54,7 @@ For my convenience I like to set the observe method in private and declare inlin
     public getValue(path: string): Observable<any> {
         return this.observe('child_added', path);
     }
+    ```
 The purpose is to forget about the event_type and focus on how I want the data. I think it is more readable to have something like `fb_service.getValue(mypath)` than `fb_service.observe('value', mypath)`
 
 ## Thank
